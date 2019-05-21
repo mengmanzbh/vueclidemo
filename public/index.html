@@ -9,11 +9,10 @@
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
   </head>
   <body>
-  <div id="vue_det">
-    <h1>site : {{site}}</h1>
-    <h1>url : {{url}}</h1>
-    <h1>{{details()}}</h1>
-  </div>
+<div id="example">
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
   <script type="text/javascript">
    var vm = new Vue({
       el: '#example',
