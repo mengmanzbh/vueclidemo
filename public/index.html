@@ -8,18 +8,25 @@
     <title>vuedemo</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but vuedemo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-
-
-    <div id="app-2">
-      <span v-bind:title="message">
-        鼠标悬停几秒钟查看此处动态绑定的提示信息！
-      </span>
-    </div>
-    
+  <div id="vue_det">
+    <h1>site : {{site}}</h1>
+    <h1>url : {{url}}</h1>
+    <h1>{{details()}}</h1>
+  </div>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#vue_det',
+      data: {
+        site: "菜鸟教程",
+        url: "www.runoob.com",
+        alexa: "10000"
+      },
+      methods: {
+        details: function () {
+          return this.site + " - 学的不仅是技术，更是梦想！";
+        }
+      }
+    })
+  </script>
   </body>
 </html>
