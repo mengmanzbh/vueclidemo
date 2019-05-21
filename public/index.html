@@ -15,16 +15,16 @@
     <h1>{{details()}}</h1>
   </div>
   <script type="text/javascript">
-    var vm = new Vue({
-      el: '#vue_det',
+   var vm = new Vue({
+      el: '#example',
       data: {
-        site: "菜鸟教程",
-        url: "www.runoob.com",
-        alexa: "10000"
+        message: 'Hello'
       },
-      methods: {
-        details: function () {
-          return this.site + " - 学的不仅是技术，更是梦想！";
+      computed: {
+        // 计算属性的 getter
+        reversedMessage: function () {
+          // `this` 指向 vm 实例
+          return this.message.split('').reverse().join('')
         }
       }
     })
