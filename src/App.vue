@@ -8,6 +8,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: '页面加载于 ' + new Date().toLocaleString()
+  }
+})
+
+
 export default {
   name: 'app',
   components: {
